@@ -1,0 +1,38 @@
+*{
+    font-family: 'Trebuchet MS';
+}
+h3{
+    color: blueviolet;
+}
+h1{
+    color: #b92b27;
+}
+#login{
+    background-color: whitesmoke;
+}
+#signup{
+    background-color: #b92b27;
+}
+.upvote{
+    background-color: greenyellow;
+    color: black;
+}
+p a{
+    color: purple;
+}
+p+h3{
+    text-decoration: underline;
+}
+.upvote + button{
+    background-color: lightblue;
+
+}
+div > input{
+    background-color:lightgray;
+}
+input[type="text"]{
+    color:darkslateblue;
+}
+input[type="password"]{
+    color: darkslategray;
+}

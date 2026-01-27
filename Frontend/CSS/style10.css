@@ -1,0 +1,32 @@
+i {
+  color: #ff4500;
+}
+span {
+  color: #9d6f24;
+}
+#pets {
+  display: flex;
+  justify-content: space-evenly;
+}
+.card {
+  width: 400px;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 25px;
+}
+img {
+  width: 100%;
+  border-radius: 25px;
+}
+h4 {
+  text-align: right;
+  color: #3c787e;
+}
+@media (max-width:376px) {
+  #pets {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+}
