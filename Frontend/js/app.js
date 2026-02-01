@@ -210,11 +210,11 @@
 // p.innerHTML = "Apna College <b>Delta</b> Practice";
 // document.querySelector("body").append(p);
 
-let btn = document.querySelector("button");
+// let btn = document.querySelector("button");
 
-btn.addEventListener("mouseout", function () {
-    console.log("Mouse out event triggered");
-});
+// btn.addEventListener("mouseout", function () {
+//     console.log("Mouse out event triggered");
+// });
 
 // let input = document.querySelector("input");
 // input.addEventListener("keypress", function () {
@@ -225,7 +225,15 @@ btn.addEventListener("mouseout", function () {
 //     console.log("Scroll event triggered");
 // });
 
-btn.addEventListener("click", function () {
-    console.log("Button clicked");
-    this.style.backgroundColor="green";
+// btn.addEventListener("click", function () {
+//     console.log("Button clicked");
+//     this.style.backgroundColor="green";
+// });
+
+let input = document.querySelector("input");
+let heading = document.querySelector("#nameHeading");
+input.addEventListener("input", function(){
+    let name = input.value;
+    let fliteredNmae = name.replace(/[^a-zA-Z ]/g, "");
+    heading.innerText = fliteredNmae;
 });
