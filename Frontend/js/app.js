@@ -189,23 +189,43 @@
 // };
 // console.log(Even(5));
 
-let input = document.createElement("input");
-let button = document.createElement("button");
-button.innerText = "Click Me";
-input.setAttribute("placeholder", "Username");
-button.setAttribute("id", "btn");
-document.querySelector("body").append(input);
-document.querySelector("body").append(button);
+// let input = document.createElement("input");
+// let button = document.createElement("button");
+// button.innerText = "Click Me";
+// input.setAttribute("placeholder", "Username");
+// button.setAttribute("id", "btn");
+// document.querySelector("body").append(input);
+// document.querySelector("body").append(button);
 
-document.querySelector("#btn").style.backgroundColor = "blue";
-document.querySelector("#btn").style.color = "white";
+// document.querySelector("#btn").style.backgroundColor = "blue";
+// document.querySelector("#btn").style.color = "white";
 
-let h1 = document.createElement("h1");
-h1.innerHTML = "<u>DOM Practice</u>";
-h1.style.color = "purple";
-//h1.style.textDecoration = "underline";
-document.querySelector("body").append(h1);
+// let h1 = document.createElement("h1");
+// h1.innerHTML = "<u>DOM Practice</u>";
+// h1.style.color = "purple";
+// //h1.style.textDecoration = "underline";
+// document.querySelector("body").append(h1);
 
-let p = document.createElement("p");
-p.innerHTML = "Apna College <b>Delta</b> Practice";
-document.querySelector("body").append(p);
+// let p = document.createElement("p");
+// p.innerHTML = "Apna College <b>Delta</b> Practice";
+// document.querySelector("body").append(p);
+
+let btn = document.querySelector("button");
+
+btn.addEventListener("mouseout", function () {
+    console.log("Mouse out event triggered");
+});
+
+// let input = document.querySelector("input");
+// input.addEventListener("keypress", function () {
+//     console.log("Key press event triggered");
+// });
+
+// document.querySelector("textarea").addEventListener("scroll", function () {
+//     console.log("Scroll event triggered");
+// });
+
+btn.addEventListener("click", function () {
+    console.log("Button clicked");
+    this.style.backgroundColor="green";
+});
