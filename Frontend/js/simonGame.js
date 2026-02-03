@@ -68,7 +68,7 @@ function checkAnswer(currentLevel) {
     level = 0;
     gamePattern = [];
     userClickedPattern = [];
-    console.log("wrong");
+    // updateHighScore();
   }
 }
 //add high score feature
