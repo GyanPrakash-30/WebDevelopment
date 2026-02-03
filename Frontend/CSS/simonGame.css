@@ -31,7 +31,7 @@ h2{
     /* display: inline-block; */
     cursor: pointer;
     transition: transform 0.1s;
-    border: 5px solid #cacaca;
+    border: 5px solid #3e3c3c;
 }
 #red{
     background-color: #ff4c4c;
@@ -46,7 +46,11 @@ h2{
     background-color: #ffff4c;
 }
 
-.flash{
+.gameflash{
     background-color: white !important;
+    opacity: 0.7 !important;
+}
+.userflash{
+    background-color: #65d3af !important;
     opacity: 0.7 !important;
 }

@@ -15,22 +15,55 @@ document.addEventListener("keypress", function () {
 function levelUp() {
   level++;
   h2.innerText = `Level ${level}`;
-  //random btn choose
-    let randomIdx = Math.floor(Math.random() * 4);
-    let randomColor = buttonColors[randomIdx];
-    let randomBtn = document.querySelector(`#${randomColor}`);
-    gamePattern.push(randomColor);
-  btnFlash(randomBtn);
+  //random color choose
+  let randomIdx = Math.floor(Math.random() * 4);
+  let randomColor = buttonColors[randomIdx];
+  let randomBtn = document.querySelector(`#${randomColor}`);
+  gamePattern.push(randomColor);
+  gameFlash(randomBtn);
 }
-//btn flash function
-function btnFlash(btn) {
-  btn.classList.add("flash");
-  console.log("flashed");
-    setTimeout(function () {
-      btn.classList.remove("flash");
-    }, 250);    
+//btn gameFlash function
+function gameFlash(btn) {
+  btn.classList.add("gameflash");
+  setTimeout(function () {
+    btn.classList.remove("gameflash");
+  }, 250);
 }
 
 //user click btn
 let btns = document.querySelectorAll(".color-button");
-console.log(btns);
+for (let btn of btns) {
+  btn.addEventListener("click", btnPressed);
+}
+
+function btnPressed() {
+  let userPressBtn = this;
+  userFlash(userPressBtn);
+  let userChosenColor = userPressBtn.id;
+  userClickedPattern.push(userChosenColor);
+  console.log(userClickedPattern);
+  checkAnswer(userClickedPattern.length - 1);
+}
+function userFlash(btn) {
+  btn.classList.add("userflash");
+  setTimeout(function () {
+    btn.classList.remove("userflash");
+  }, 250);
+}
+
+//check answer
+function checkAnswer(currentLevel) {
+  if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
+    if (userClickedPattern.length === gamePattern.length) {
+      setTimeout(levelUp, 1000);
+      userClickedPattern = [];
+    }
+  } else {
+    h2.innerText = `Game Over, Press Any Key to Restart`;
+    started = false;
+    level = 0;
+    gamePattern = [];
+    userClickedPattern = [];
+    console.log("wrong");
+  }
+}
