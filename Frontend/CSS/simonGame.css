@@ -28,7 +28,7 @@ h2{
     height: 150px;
     margin: 10px;
     border-radius: 15px;
-    display: inline-block;
+    /* display: inline-block; */
     cursor: pointer;
     transition: transform 0.1s;
     border: 5px solid #cacaca;
@@ -48,4 +48,5 @@ h2{
 
 .flash{
     background-color: white !important;
+    opacity: 0.7 !important;
 }

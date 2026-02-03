@@ -28,5 +28,9 @@ function btnFlash(btn) {
   console.log("flashed");
     setTimeout(function () {
       btn.classList.remove("flash");
-    }, 1000);    
+    }, 250);    
 }
+
+//user click btn
+let btns = document.querySelectorAll(".color-button");
+console.log(btns);
