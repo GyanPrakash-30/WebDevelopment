@@ -45,3 +45,7 @@ h2{
 #yellow{
     background-color: #ffff4c;
 }
+
+.flash{
+    background-color: white !important;
+}
