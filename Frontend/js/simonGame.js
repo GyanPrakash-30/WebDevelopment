@@ -41,7 +41,6 @@ function btnPressed() {
   userFlash(userPressBtn);
   let userChosenColor = userPressBtn.id;
   userClickedPattern.push(userChosenColor);
-  console.log(userClickedPattern);
   checkAnswer(userClickedPattern.length - 1);
 }
 function userFlash(btn) {
