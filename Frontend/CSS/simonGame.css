@@ -51,6 +51,10 @@ h2{
     opacity: 0.7 !important;
 }
 .userflash{
-    background-color: #65d3af !important;
+    background-color: #71eec4 !important;
     opacity: 0.7 !important;
+}
+.gameover{
+    background-color: red;
+    transition: background-color 0.2s;
 }

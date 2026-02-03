@@ -59,7 +59,12 @@ function checkAnswer(currentLevel) {
       userClickedPattern = [];
     }
   } else {
-    h2.innerText = `Game Over, Press Any Key to Restart`;
+    h2.innerHTML = `Game Over, your score was <b style="color: red;">${level}</b>. <br>Press Any Key to Restart`;
+    let body = document.querySelector("body");
+    body.classList.add("gameover");
+    setTimeout(function () {
+      body.classList.remove("gameover");
+    }, 200);
     started = false;
     level = 0;
     gamePattern = [];
@@ -67,3 +72,12 @@ function checkAnswer(currentLevel) {
     console.log("wrong");
   }
 }
+//add high score feature
+// let highScore = 0;
+// function updateHighScore() {
+//   if (level > highScore) {
+//     highScore = level;
+//     let highScoreDisplay = document.querySelector("#high-score");
+//     highScoreDisplay.innerText = `High Score: ${highScore}`;
+//   }
+// }
